@@ -5,6 +5,11 @@ import store from "./store";
 import "styles/normalize.css";
 import "styles/iconfont.css";
 
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+
+Vue.use(VueAwesomeSwiper);
+
 Vue.config.productionTip = false;
 
 new Vue({
