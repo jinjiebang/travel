@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper v-if="showSwiper">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -16,70 +16,13 @@
 <script>
 export default {
   name: "HomeIcons",
-  data() {
-    return {
-      iconList: [
-        {
-          id: "001",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          desc: "热门景点"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png",
-          desc: "东方明珠"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
-          desc: "上海迪士尼"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png",
-          desc: "上海海昌"
-        },
-        {
-          id: "005",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          desc: "热门景点"
-        },
-        {
-          id: "006",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/fa/2548667cb6e902.png",
-          desc: "东方明珠"
-        },
-        {
-          id: "007",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
-          desc: "上海迪士尼"
-        },
-        {
-          id: "008",
-          imgUrl:
-            "https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png",
-          desc: "上海海昌"
-        },
-        {
-          id: "009",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
-          desc: "上海迪士尼"
-        }
-      ]
-    };
+  props: {
+    list: Array
   },
   computed: {
     pages() {
       const pages = [];
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         let page = Math.floor(index / 8);
         if (!pages[page]) {
           pages[page] = [];
@@ -87,6 +30,9 @@ export default {
         pages[page].push(item);
       });
       return pages;
+    },
+    showSwiper() {
+      return this.list.length > 0;
     }
   }
 };
