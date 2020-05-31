@@ -3,7 +3,7 @@ function resolve (dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
-    publicPath: './',
+    publicPath: '/travel/',
     lintOnSave: true,
     chainWebpack: (config)=>{
         config.resolve.alias
