@@ -34,14 +34,14 @@ export default {
           desc: "全球最大的迪士尼城堡"
         },
         {
-          id: "001",
+          id: "002",
           imgUrl:
             "http://img1.qunarzz.com/sight/p0/2005/23/23c1b2b13230b966a3.water.jpg_200x200_f3a19805.jpg",
           title: "上海野生动物园",
           desc: "会跳芭蕾的小海狮们~"
         },
         {
-          id: "001",
+          id: "003",
           imgUrl:
             "http://img1.qunarzz.com/sight/p0/2005/9e/9e643f96c84b5c2ea3.water.jpg_200x200_2a3eef5b.jpg",
           title: "上海欢乐谷",

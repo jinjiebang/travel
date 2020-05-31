@@ -29,7 +29,7 @@ export default {
           desc: "中西合璧，现代和传统各有各的精彩"
         },
         {
-          id: "001",
+          id: "002",
           imgUrl:
             "http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg",
           title: "周末亲子爱玩",
@@ -37,7 +37,7 @@ export default {
             "走进自然或玩转乐园，感知大千世界，游乐项目惊险刺激，特色表演异彩纷呈，等你们~"
         },
         {
-          id: "001",
+          id: "003",
           imgUrl:
             "http://img1.qunarzz.com/sight/source/1505/7b/2a6b0ce087f0e5.jpg_r_640x214_5c76b115.jpg",
           title: "情迷博物馆",
