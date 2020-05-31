@@ -5,6 +5,7 @@ import store from "./store";
 import "styles/reset.css";
 import "styles/normalize.css";
 import "styles/iconfont.css";
+import "styles/border.css";
 
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
