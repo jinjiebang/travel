@@ -7,10 +7,12 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="headerRight">
-      {{ city }}
-      <span class="iconfont arrow-icon">&#xe600;</span>
-    </div>
+    <router-link to="/city">
+      <div class="headerRight">
+        {{ city }}
+        <span class="iconfont arrow-icon">&#xe600;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -26,7 +28,7 @@ export default {
 <style lang="scss" scoped>
 @import "styles/varibles.scss";
 .header {
-  line-height: 0.86rem;
+  line-height: $headerHeight;
   display: flex;
   background: $bgColor;
   color: #fff;
@@ -54,6 +56,7 @@ export default {
     float: right;
     text-align: center;
     padding: 0 0.1rem;
+    color: #fff;
     .arrow-icon {
       margin-left: -0.04rem;
       font-size: 0.24rem;
