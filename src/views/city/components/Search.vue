@@ -11,7 +11,7 @@ export default {
 <style lang="scss" scoped>
 @import "styles/varibles.scss";
 .search {
-  line-height: 0.72rem;
+  height: 0.72rem;
   background: $bgColor;
   padding: 0 0.1rem;
   .search-input {
