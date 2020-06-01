@@ -1,15 +1,25 @@
 <template>
-  <div class="list">
-    <div class="item" v-for="(item, key) of cities" :key="key">
+  <ul class="list">
+    <li
+      class="item"
+      v-for="(item, key) of cities"
+      :key="key"
+      @click="handleClickLetter"
+    >
       {{ key }}
-    </div>
-  </div>
+    </li>
+  </ul>
 </template>
 <script>
 export default {
   name: "CityAlphabet",
   props: {
     cities: Object
+  },
+  methods: {
+    handleClickLetter(e) {
+      this.$emit("change", e.target.innerText);
+    }
   }
 };
 </script>
