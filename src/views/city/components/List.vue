@@ -63,6 +63,9 @@ export default {
       click: true
     });
   },
+  activated() {
+    this.scroll.enable();
+  },
   watch: {
     letter() {
       if (this.letter) {
