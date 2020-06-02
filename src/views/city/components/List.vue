@@ -64,7 +64,7 @@ export default {
     });
   },
   activated() {
-    this.scroll.enable();
+    this.scroll.refresh();
   },
   watch: {
     letter() {
