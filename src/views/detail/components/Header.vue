@@ -33,7 +33,6 @@ export default {
         this.opacityStyle = {
           opacity
         };
-        console.log("style", this.opacityStyle);
         this.showAbs = false;
       } else {
         this.showAbs = true;
