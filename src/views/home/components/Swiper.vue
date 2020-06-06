@@ -19,7 +19,8 @@ export default {
       swiperOptions: {
         pagination: {
           el: ".swiper-pagination",
-          bulletActiveClass: "my-bullet-active"
+          observeParents: true,
+          observer: true
         }
       }
     };
@@ -31,22 +32,14 @@ export default {
     showSwiper() {
       return this.list.length > 0;
     }
-  },
-  mounted() {
-    if (this.swiper) {
-      console.log("Current Swiper instance object", this.swiper);
-      this.swiper.slideTo(3, 1000, false);
-    }
   }
 };
 </script>
-<style lang="scss">
-.my-bullet-active {
+<style lang="scss" scoped>
+.wrapper /deep/ .swiper-pagination-bullet-active {
   background: #fff !important;
   opacity: 0.8 !important;
 }
-</style>
-<style lang="scss" scoped>
 .wrapper {
   overflow: hidden;
   width: 100%;
