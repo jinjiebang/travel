@@ -9,7 +9,6 @@
       </router-link>
       景点详情
     </div>
-    <div class="content"></div>
   </div>
 </template>
 
@@ -26,7 +25,10 @@ export default {
   },
   methods: {
     handleScroll() {
-      let top = document.documentElement.scrollTop;
+      const top =
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        window.pageYOffset;
       if (top > 60) {
         let opacity = Math.min(1, top / 140);
         this.opacityStyle = {
@@ -64,6 +66,7 @@ export default {
   }
 }
 .header-fixed {
+  z-index: 2;
   line-height: $headerHeight;
   background: $bgColor;
   color: #fff;
@@ -81,8 +84,5 @@ export default {
     left: 0;
     top: 0;
   }
-}
-.content {
-  height: 50rem;
 }
 </style>
